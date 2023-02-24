@@ -5,9 +5,12 @@ import Flex from "./layout/Flex";
 import { BiCategory } from "react-icons/bi";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { FaSearch, FaUserAlt, FaShoppingCart } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 import List from "./layout/List";
 import Listitem from "./layout/Listitem";
 import Search from "./layout/Search";
+import Image from "./layout/Image";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   let [categoryDrpoDownShow, setCategoryDrpoDownShow] = useState(false);
@@ -45,7 +48,7 @@ const Header = () => {
           <div>
             <DropDown
               dropref={Categoryref}
-            //   onClick={() => setCategoryDrpoDownShow(!categoryDrpoDownShow)}
+              //   onClick={() => setCategoryDrpoDownShow(!categoryDrpoDownShow)}
               className="relative cursor-pointer"
             >
               <Flex className="items-center gap-x-2.5">
@@ -57,27 +60,27 @@ const Header = () => {
               {categoryDrpoDownShow && (
                 <List className="absolute top-[30px] left-0 w-[263px] cursor-pointer bg-bl">
                   <Listitem
-                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white"
+                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white ease-in duration-300"
                     itemName="Accesories"
                   />
                   <Listitem
-                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white"
+                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white ease-in duration-300"
                     itemName="Furniture"
                   />
                   <Listitem
-                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white"
+                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white ease-in duration-300"
                     itemName="Electronics"
                   />
                   <Listitem
-                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white"
+                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white ease-in duration-300"
                     itemName="Clothes"
                   />
                   <Listitem
-                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white"
+                    className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white ease-in duration-300"
                     itemName="Bags"
                   />
                   <Listitem
-                    className="py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white"
+                    className="py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white ease-in duration-300"
                     itemName="Home appliances"
                   />
                 </List>
@@ -98,7 +101,7 @@ const Header = () => {
           <div className="flex gap-x-5">
             <DropDown
               dropref={Userref}
-            //   onClick={() => setUserDrpoDownShow(!userDrpoDownShow)}
+              //   onClick={() => setUserDrpoDownShow(!userDrpoDownShow)}
               className="relative flex"
             >
               <FaUserAlt className="cursor-pointer" />
@@ -117,24 +120,81 @@ const Header = () => {
               )}
             </DropDown>
             <div>
-            <DropDown
-              dropref={Cartref}
-            //   onClick={() => setCartDrpoDownShow(!cartDrpoDownShow)}
-              className="relative flex"
-            >
-              <FaShoppingCart className="cursor-pointer" />
-              {cartDrpoDownShow && (
-                <>
-                <div className="flex">
-<div>
-    <Image src/>
-</div>
-<div></div>
-                </div>
-                <div></div>
-                </>
-              )}
-            </DropDown>
+              <DropDown
+                dropref={Cartref}
+                //   onClick={() => setCartDrpoDownShow(!cartDrpoDownShow)}
+                className="relative flex"
+              >
+                <FaShoppingCart className="cursor-pointer" />
+                {cartDrpoDownShow && (
+                  <div className="absolute top-[30px] right-0 w-[360px]">
+                    {/*  */}
+                    <div className="relative flex items-center gap-x-5 bg-[#c4c4c4] p-5">
+                      <div>
+                        <Image src="images/cartProduct.png" />
+                      </div>
+                      <div>
+                        <h4 className="mb-2 font-dm text-sm font-bold text-bl">
+                          Black Smart Watch
+                        </h4>
+                        <p className="font-dm text-sm font-bold text-bl">
+                          $44.00
+                        </p>
+                      </div>
+                      <ImCross className=" absolute top-[50%] right-5 translate-y-[-50%] cursor-pointer text-sm text-bl" />
+                    </div>
+                    <div className="relative flex items-center gap-x-5 bg-[#c4c4c4] p-5">
+                      <div>
+                        <Image src="images/cartProduct.png" />
+                      </div>
+                      <div>
+                        <h4 className="mb-2 font-dm text-sm font-bold text-bl">
+                          Black Smart Watch
+                        </h4>
+                        <p className="font-dm text-sm font-bold text-bl">
+                          $44.00
+                        </p>
+                      </div>
+                      <ImCross className=" absolute top-[50%] right-5 translate-y-[-50%] cursor-pointer text-sm text-bl" />
+                    </div>
+                    <div className="relative flex items-center gap-x-5 bg-[#c4c4c4] p-5">
+                      <div>
+                        <Image src="images/cartProduct.png" />
+                      </div>
+                      <div>
+                        <h4 className="mb-2 font-dm text-sm font-bold text-bl">
+                          Black Smart Watch
+                        </h4>
+                        <p className="font-dm text-sm font-bold text-bl">
+                          $44.00
+                        </p>
+                      </div>
+                      <ImCross className=" absolute top-[50%] right-5 translate-y-[-50%] cursor-pointer text-sm text-bl" />
+                    </div>
+                    {/*  */}
+                    <div className="border border-[#f3f3f5] p-5">
+                      <h3 className="font-dm text-base text-[#767676]">
+                        Subtotal:{" "}
+                        <span className="!font-bold text-bl">$44.00</span>
+                      </h3>
+                      <div className="mt-3 flex justify-center gap-x-5">
+                        <Link
+                          to="#"
+                          className="border border-bl py-4 px-10 font-dm text-sm font-bold text-bl"
+                        >
+                          View Cart
+                        </Link>
+                        <Link
+                          to="#"
+                          className="bg-bl py-4 px-10 font-dm text-sm font-bold text-white"
+                        >
+                          Checkout
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </DropDown>
             </div>
           </div>
         </Flex>
