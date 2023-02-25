@@ -1,12 +1,16 @@
 import React from 'react'
-import Header from '../../components/Header'
-import Navbar from '../../components/Navbar'
+import AdditonalInfo from '../../components/AdditonalInfo'
+import Advertisment from '../../components/Advertisment'
+import Banner from '../../components/Banner'
+import NewArrivels from '../../components/NewArrivels'
 
 const Home = () => {
   return (
     <>
-    <Navbar/>
-    <Header/>
+    <Banner/>
+    <AdditonalInfo/>
+    <Advertisment/>
+    <NewArrivels/>
     </>
   )
 }

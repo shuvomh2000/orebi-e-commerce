@@ -41,7 +41,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="bg-[#f5f5f3] py-4">
+    <div className="bg-[#f5f5f3] py-3">
       <Container>
         <Flex className="items-center justify-between">
           {/* category part */}
@@ -49,16 +49,16 @@ const Header = () => {
             <DropDown
               dropref={Categoryref}
               //   onClick={() => setCategoryDrpoDownShow(!categoryDrpoDownShow)}
-              className="relative cursor-pointer"
+              className="relative cursor-pointer z-[99]"
             >
               <Flex className="items-center gap-x-2.5">
                 <BiCategory className="text-[18px] text-bl " />
-                <h4 className="font-dm text-sm font-bold text-bl">
+                <h4 className="font-dm text-sm font-bold text-bl hidden lg:inline-block">
                   Shop by Category
                 </h4>
               </Flex>
               {categoryDrpoDownShow && (
-                <List className="absolute top-[30px] left-0 w-[263px] cursor-pointer bg-bl">
+                <List className="absolute top-8 left-0 w-[263px] cursor-pointer bg-bl">
                   <Listitem
                     className="border-b border-[#2D2D2D] py-4 px-5 font-dm text-sm text-wh_opacity hover:ml-2.5 hover:text-white ease-in duration-300"
                     itemName="Accesories"
@@ -91,7 +91,7 @@ const Header = () => {
           <div>
             <div className="relative font-dm ">
               <Search
-                className="font-regular w-[600px] py-4 pl-5 pr-10 text-base text-black placeholder:font-dm placeholder:text-base placeholder:text-[#c4c4c4]"
+                className="font-regular w-auto lg:w-[600px] py-2 lg:py-4 pl-5 pr-10 text-base text-black placeholder:font-dm placeholder:text-base placeholder:text-[#c4c4c4]"
                 placeholder="Search Products..."
               />
               <FaSearch className="absolute right-4 top-[50%] translate-y-[-50%] text-base" />
@@ -102,7 +102,7 @@ const Header = () => {
             <DropDown
               dropref={Userref}
               //   onClick={() => setUserDrpoDownShow(!userDrpoDownShow)}
-              className="relative flex"
+              className="relative flex z-[99]"
             >
               <FaUserAlt className="cursor-pointer" />
               <BsFillCaretDownFill className="cursor-pointer" />
@@ -123,7 +123,7 @@ const Header = () => {
               <DropDown
                 dropref={Cartref}
                 //   onClick={() => setCartDrpoDownShow(!cartDrpoDownShow)}
-                className="relative flex"
+                className="relative flex z-[99]"
               >
                 <FaShoppingCart className="cursor-pointer" />
                 {cartDrpoDownShow && (
@@ -143,34 +143,7 @@ const Header = () => {
                       </div>
                       <ImCross className=" absolute top-[50%] right-5 translate-y-[-50%] cursor-pointer text-sm text-bl" />
                     </div>
-                    <div className="relative flex items-center gap-x-5 bg-[#c4c4c4] p-5">
-                      <div>
-                        <Image src="images/cartProduct.png" />
-                      </div>
-                      <div>
-                        <h4 className="mb-2 font-dm text-sm font-bold text-bl">
-                          Black Smart Watch
-                        </h4>
-                        <p className="font-dm text-sm font-bold text-bl">
-                          $44.00
-                        </p>
-                      </div>
-                      <ImCross className=" absolute top-[50%] right-5 translate-y-[-50%] cursor-pointer text-sm text-bl" />
-                    </div>
-                    <div className="relative flex items-center gap-x-5 bg-[#c4c4c4] p-5">
-                      <div>
-                        <Image src="images/cartProduct.png" />
-                      </div>
-                      <div>
-                        <h4 className="mb-2 font-dm text-sm font-bold text-bl">
-                          Black Smart Watch
-                        </h4>
-                        <p className="font-dm text-sm font-bold text-bl">
-                          $44.00
-                        </p>
-                      </div>
-                      <ImCross className=" absolute top-[50%] right-5 translate-y-[-50%] cursor-pointer text-sm text-bl" />
-                    </div>
+                    
                     {/*  */}
                     <div className="border border-[#f3f3f5] p-5">
                       <h3 className="font-dm text-base text-[#767676]">

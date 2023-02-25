@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div>
       <Container>
-        <Flex className="justify-between">
+        <Flex className="justify-between py-2 items-center">
           <div className="w-full lg:w-2/12">
             <Image src="images/logo.png" />
           </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
               />
             )}
           </div>
-          <div className="w-full lg:w-8/12 absolute top-8 left-0 lg:relative text-center lg:top-0 lg:left-0">
+          <div className="w-full lg:w-8/12 absolute z-[99999] top-10 left-0 lg:relative text-center lg:top-0 lg:left-0">
             {show && (
               <List className="lg:flex justify-end gap-x-10 bg-white">
                 <Listitem
