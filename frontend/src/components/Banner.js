@@ -21,7 +21,7 @@ const Banner = () => {
         appendDots: dots => (
             <div
               style={{
-                display:"inline-block",
+                // display:"inline-block",
                 position:"absolute",
                 top:"50%",
                 left:"8%",

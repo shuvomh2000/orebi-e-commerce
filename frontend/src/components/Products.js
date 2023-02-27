@@ -11,10 +11,10 @@ const Products = () => {
     <div>
         <div className='relative overflow-hidden group'>
             <Image class src="images/product.png"/>
-            {Badge &&
+            {/* {badge && */}
             <Badge/>
-            }
-            <div className='py-6 px-8 bg-white w-full absolute bottom-[-44%] left-0 group-hover:bottom-[0%] ease-in duration-100'>
+            {/* } */}
+            <div className='py-6 px-8 bg-white w-full absolute bottom-[-100%] left-0 group-hover:bottom-[0%] ease-in duration-100'>
                 <Flex className='gap-x-4 items-center justify-end'>
                     <h3 className='font-dm font-bold text-base text-[#767676] hover:text-bl hover:font-bold cursor-pointer'>Add to Wish List</h3>
                     <AiFillHeart className='text-sm text-bl cursor-pointer'/>
@@ -29,11 +29,11 @@ const Products = () => {
                 </Flex>
             </div>
         </div>
-        <Flex className="gap-x-[115px] items-center pt-6 pb-4">
-            <h3 className='font-dm font-bold text-xl text-bl'>Basic Crew Neck Tee</h3>
-            <p className='font-dm font-regular text-base text-[#767676]'>$44.00</p>
+        <Flex className="justify-between items-center pt-6 pb-4">
+            <h3 className='font-dm font-bold text-[12px] xl:text-xl text-bl'>Basic Crew Neck Tee</h3>
+            <p className='font-dm font-regular text-[12px] xl:text-base text-[#767676]'>$44.00</p>
         </Flex>
-        <p className='font-dm font-regular text-base text-[#767676]'>Black</p>
+        <p className='font-dm font-regular text-[12px] xl:text-base text-[#767676]'>Black</p>
     </div>
   )
 }

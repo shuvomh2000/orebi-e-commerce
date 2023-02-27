@@ -5,13 +5,14 @@ import Heading from "./layout/Heading";
 import Products from "./Products";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const NewArrivels = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    autoplay:true,
+    // speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
@@ -21,7 +22,8 @@ const NewArrivels = () => {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
+            dots: false,
+            arrows:true
           }
         },
         {
@@ -29,14 +31,18 @@ const NewArrivels = () => {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            initialSlide: 2
+            initialSlide: 2,
+            dots: false,
+            arrows:true
           }
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            dots: false,
+            arrows:false
           }
         }
       ]
@@ -48,16 +54,19 @@ const NewArrivels = () => {
         <div>
           <Slider {...settings}>
             {/* <Flex className="justify-between"> */}
-              <div>
+              <div className="w-[20%] px-3">
                 <Products badge={false} />
               </div>
-              <div>
+              <div className="w-[20%] px-3">
                 <Products />
               </div>
-              <div>
+              <div className="w-[20%] px-3">
                 <Products />
               </div>
-              <div>
+              <div className="w-[20%] px-3">
+                <Products />
+              </div>
+              <div className="w-[20%] px-3">
                 <Products />
               </div>
             {/* </Flex> */}
