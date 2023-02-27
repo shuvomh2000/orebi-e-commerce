@@ -6,8 +6,11 @@ import Products from "./Products";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
+import SampleNextArrow from "./layout/SampleNextArrow";
+import SamplePrevArrow from "./layout/SamplePrevArrow";
 
 const NewArrivels = () => {
+
   const settings = {
     dots: false,
     infinite: true,
@@ -15,8 +18,11 @@ const NewArrivels = () => {
     // speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
     responsive: [
         {
+          // lg
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
@@ -27,6 +33,7 @@ const NewArrivels = () => {
           }
         },
         {
+          // sm
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
@@ -45,7 +52,8 @@ const NewArrivels = () => {
             arrows:false
           }
         }
-      ]
+      ],
+      
   };
   return (
     <div>
