@@ -45,24 +45,29 @@ const Navbar = () => {
             {show && (
               <List className="lg:flex justify-end gap-x-10 bg-white">
                 <Listitem
-                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize cursor-pointer hover:text-black"
+                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize hover:text-black"
                   itemName="Home"
+                  to="/"
                 />
                 <Listitem
-                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize cursor-pointer hover:text-black"
+                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize hover:text-black"
                   itemName="shop"
+                  to="/product"
                 />
                 <Listitem
-                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize cursor-pointer hover:text-black"
+                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize hover:text-black"
                   itemName="about"
+                  to="/#"
                 />
                 <Listitem
-                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize cursor-pointer hover:text-black"
+                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize hover:text-black"
                   itemName="contacts"
+                  to="/#"
                 />
                 <Listitem
-                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize cursor-pointer hover:text-black"
+                  className="font-dm text-sm font-bold text-[#767676] py-2 capitalize hover:text-black"
                   itemName="journal"
+                  to="/#"
                 />
               </List>
             )}
