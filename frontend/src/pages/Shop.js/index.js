@@ -11,7 +11,7 @@ const Shop = () => {
         <Breadcrumb title="products" />
         <Flex>
           <div className="w-[25%]">bfd</div>
-          <div className="w-[75%]">
+          <div className="w-[75%] relative">
             <Pagination itemsPerPage={12} />
           </div>
         </Flex>
