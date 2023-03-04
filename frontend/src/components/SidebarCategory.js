@@ -1,39 +1,39 @@
 import React, { useState } from "react";
-import {AiFillCaretDown,AiFillCaretUp} from 'react-icons/ai'
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import SubCategoryItem from "./SubCategoryItem";
 
-const SidebarCategory = ({ title, icon, fixed }) => {
+const SidebarCategory = ({ title, icon, fixed, children }) => {
   let [show, setShow] = useState(true);
+
+  // let handleSubDropDown =()=>{
+  // }
   return (
     <div>
-      {/* onClick={()=>setShow(!show)} */}
-      {/* <h1 className="flex items-center justify-between font-dm text-xl font-bold text-bl">
-        {title}
-        {icon}
-      </h1> */}
       {fixed ? (
         <h4
           onClick={() => setShow(!show)}
-          className="flex items-center justify-between font-dm text-xl font-bold text-bl cursor-pointer"
+          className="py-4 flex cursor-pointer items-center justify-between font-dm text-xl font-bold text-bl"
         >
           {title}
-          {show?
-          <AiFillCaretUp/>
-          :
-          <AiFillCaretDown/>
-          }
+          {show ? <AiFillCaretUp /> : <AiFillCaretDown />}
         </h4>
       ) : (
-        <h4 className="flex items-center justify-between font-dm text-xl font-bold text-bl cursor-pointer">
+        <h4 className="py-4 flex cursor-pointer items-center justify-between font-dm text-xl font-bold text-bl">
           {title}
-          {/* {icon} */}
         </h4>
       )}
       {show && (
         <>
-          <p>cvdsv</p>
-          <p>cvdsv</p>
-          <p>cvdsv</p>
-          <p>cvdsv</p>
+          <SubCategoryItem title="category" subItem={false} color="red">
+            <p className="py-5 border-b border-[#f0f0f0] cursor-pointer items-center justify-between pl-5 font-dm text-base font-bold text-[#767676]">
+              cvdsv
+            </p>
+          </SubCategoryItem>
+          <SubCategoryItem title="category" subItem={true} color="red">
+            <p className="py-5 border-b border-[#f0f0f0] cursor-pointer items-center justify-between pl-5 font-dm text-base font-bold text-[#767676]">
+              cvdsv
+            </p>
+          </SubCategoryItem>
         </>
       )}
     </div>
