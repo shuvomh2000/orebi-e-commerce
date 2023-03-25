@@ -8,7 +8,7 @@ const About = () => {
   return (
     <Container>
         <Breadcrumb/>
-        <Flex className="gap-x-10 mt-12 md:mt-[136px]">
+        <Flex className="gap-x-10">
             <div>
                 <Image src="images/about.png"/>
             </div>
