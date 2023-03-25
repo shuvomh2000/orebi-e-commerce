@@ -111,10 +111,12 @@ const Header = () => {
                   <Listitem
                     className="border-b border-[#F0F0F0] py-4 px-5 font-dm text-sm font-bold capitalize text-black hover:bg-black hover:text-white"
                     itemName="My Account"
+                    to="/login"
                   />
                   <Listitem
                     className="py-4 px-5 font-dm text-sm font-bold capitalize text-black hover:bg-black hover:text-white"
                     itemName="Log Out"
+                    to="/registration"
                   />
                 </List>
               )}

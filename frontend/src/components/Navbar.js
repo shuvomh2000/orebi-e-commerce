@@ -57,12 +57,12 @@ const Navbar = () => {
                 <Listitem
                   className="font-dm text-sm font-bold text-[#767676] py-2 capitalize hover:text-black"
                   itemName="about"
-                  to="/#"
+                  to="/about"
                 />
                 <Listitem
                   className="font-dm text-sm font-bold text-[#767676] py-2 capitalize hover:text-black"
                   itemName="contacts"
-                  to="/#"
+                  to="/contacts"
                 />
                 <Listitem
                   className="font-dm text-sm font-bold text-[#767676] py-2 capitalize hover:text-black"
