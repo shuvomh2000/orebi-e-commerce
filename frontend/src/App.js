@@ -1,6 +1,7 @@
 
 import { RouterProvider,createBrowserRouter,createRoutesFromElements,Route } from "react-router-dom";
 import About from "./pages/about";
+import Cart from "./pages/cart";
 import Contacts from "./pages/contacts";
 import Home from "./pages/home";
 import Login from "./pages/login";
@@ -17,6 +18,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/contacts' element={<Contacts/>}></Route>
     <Route path='/login' element={<Login/>}></Route>
     <Route path='/registration' element={<Registration/>}></Route>
+    <Route path='/cart' element={<Cart/>}></Route>
   </Route>
 ))
 

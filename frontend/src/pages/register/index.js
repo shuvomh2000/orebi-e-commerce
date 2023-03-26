@@ -114,7 +114,7 @@ const Registration = () => {
           <div className="mt-16">
             <div className="flex items-center">
               <input
-                className="outline-0 w-[15px] h-[15px] border border-[#767676] appearance-none flex items-center justify-center after:content-[''] after:w-[10px] after:h-[10px] after:hidden after:bg-[#767676] after:checked:inline-block"
+                className="outline-0 w-[15px] h-[15px] border border-[#767676] appearance-none flex items-center justify-center after:content-[''] after:w-[10px] after:h-[10px] after:hidden after:bg-bl after:checked:inline-block"
                 type="checkbox"
                 id="Privacy_Policy"
                 
@@ -130,12 +130,12 @@ const Registration = () => {
               <h4 className="font-regular font-dm text-sm text-[#767676]">
                 Subscribe Newsletter
               </h4>
-                <input className="outline-0 w-[15px] h-[15px] border border-[#767676] appearance-none flex items-center justify-center after:content-[''] after:w-[10px] after:h-[10px] after:hidden after:bg-[#767676] after:checked:inline-block" type="radio" name="choice-radio" id="yes" />
+                <input className="outline-0 w-[15px] h-[15px] border border-[#767676] appearance-none flex items-center justify-center after:content-[''] after:w-[10px] after:h-[10px] after:hidden after:bg-bl after:checked:inline-block" type="radio" name="choice-radio" id="yes" />
                
               <label for="yes" className="font-regular font-dm text-base text-[#767676] capitalize">
               Yes
               </label>
-                <input className="outline-0 w-[15px] h-[15px] border border-[#767676] appearance-none flex items-center justify-center after:content-[''] after:w-[10px] after:h-[10px] after:hidden after:bg-[#767676] after:checked:inline-block" type="radio" name="choice-radio" id="no" />
+                <input className="outline-0 w-[15px] h-[15px] border border-[#767676] appearance-none flex items-center justify-center after:content-[''] after:w-[10px] after:h-[10px] after:hidden after:bg-bl after:checked:inline-block" type="radio" name="choice-radio" id="no" />
               <label for="no" className="font-regular font-dm text-base text-[#767676] capitalize">
                 no
               </label>

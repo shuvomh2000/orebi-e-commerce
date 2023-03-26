@@ -154,7 +154,7 @@ const Header = () => {
                       </h3>
                       <div className="mt-3 flex justify-center gap-x-5">
                         <Link
-                          to="#"
+                          to="/cart"
                           className="border border-bl py-4 px-10 font-dm text-sm font-bold text-bl"
                         >
                           View Cart
