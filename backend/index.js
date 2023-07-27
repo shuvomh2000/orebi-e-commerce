@@ -2,11 +2,13 @@ const express = require('express')
 const app = express()
 const routes = require("./routes")
 var cors = require('cors')
-const DB =require("./config/dbConnect.js")
+const DbConnection =require("./config/dbConnect.js")
 
 
-// 
-DB()
+//middleware 
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+DbConnection()
 app.use(cors())
 app.use(routes)
 

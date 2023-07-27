@@ -1,8 +1,7 @@
-const express = require("express")
-const _ = express.Router()
+const express = require("express");
+const _ = express.Router();
+const registrationControllers = require("../../controllers/registrationControllers.js")
 
-_.get("/registration",(req,res)=>{
-    res.send("ami auth router")
-})
+_.post("/registration",registrationControllers);
 
-module.exports = _
+module.exports = _;
