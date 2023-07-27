@@ -44,6 +44,9 @@ const userSchema = new Schema({
     },
     linkedinId:{
         type:String
+    },
+    randomOtp:{
+        type:String
     }
 })
 

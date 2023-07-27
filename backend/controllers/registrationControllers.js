@@ -22,7 +22,7 @@ let registrationControllers =  async (req, res) => {
         return res.send({ error: "email already exits,try another!" });
       }
   
-      bcrypt.hash(password,10,function(err,hash){
+      bcrypt.hash(password,10,async function(err,hash){
           const user = new User ({
               fullName,
               email,
@@ -31,7 +31,20 @@ let registrationControllers =  async (req, res) => {
           user.save()
           const generator2 = aleaRNGFactory(Date.now());
           const otp = (generator2.uInt32().toString().substring(0,4))
+          let otpStore = await User.findOneAndUpdate(
+            {email},
+            {$set:{randomOtp:otp}},
+            {new:true}
+            )
           sendMail(email,otp,otpTemplate)
+            setTimeout(async function(){
+                console.log("OTP dlt")
+                let otpStore = await User.findOneAndUpdate(
+                    {email},
+                    {$unset:{randomOtp:""}},
+                    {new:true}
+                    )
+            },300000)
           res.send({ 
               success: "registration successfull",
               fullName:fullName,
