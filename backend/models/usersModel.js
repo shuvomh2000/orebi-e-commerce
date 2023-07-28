@@ -31,14 +31,13 @@ const userSchema = new Schema({
         default:"member",
         enum:["admin","merchant","editor","member"]
     },
-    upadted:{
+    updated:{
         type:Date
     },
     created:{
         type:Date,
         default:Date.now
     },
-     
     facebookId:{
         type:String
     },
