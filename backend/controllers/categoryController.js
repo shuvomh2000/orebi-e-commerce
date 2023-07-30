@@ -71,9 +71,23 @@ let subCategoryStatusController = async (req, res) => {
   }
 };
 
+// get all category
+async function getAllCategory(req,res){
+   let data = await Category.find({}).populate("subCategory")
+  res.send(data)
+}
+
+// get all sub category
+async function getAllSubCategory(req,res){
+   let data = await SubCategory.find({}).populate("category")
+  res.send(data)
+}
+
 module.exports = {
   createCategoryController,
   categoryStatusController,
   createSubCategoryController,
-  subCategoryStatusController
+  subCategoryStatusController,
+  getAllCategory,
+  getAllSubCategory
 };
