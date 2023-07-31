@@ -1,5 +1,6 @@
 const User = require("../models/usersModel.js");
 const Products = require("../models/productSchema.js");
+const Variants = require("../models/variantSchema.js");
 
 async function secureUpload(req, res, next) {
   let merchantId = req.headers.authorization.split("@")[1];
@@ -41,9 +42,35 @@ async function createUplaod(req, res) {
       description,
       image,
       store,
-    }).save();
+    })
+    product.save()
     res.send({ success: "Product create successfully" });
   }
 }
 
-module.exports = { secureUpload, createUplaod };
+async function createVariant(req, res) {
+  const { product, price, quantity, color, image, storage, ram, size } =
+    req.body;
+
+  let variant = new Variants({
+    product,
+    price,
+    quantity,
+    color,
+    image,
+    storage,
+    ram,
+    size,
+  })
+  variant.save();
+
+  await Products.findOneAndUpdate(
+    { _id: variant.product },
+    { $push: { variants: variant._id } },
+    { new: true }
+  );
+
+  res.send({ success: "variant create successfully" });
+}
+
+module.exports = { secureUpload, createUplaod, createVariant };

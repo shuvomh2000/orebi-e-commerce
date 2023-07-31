@@ -4,22 +4,22 @@ const {Schema} = require("mongoose")
 const productSchema = new Schema({
     name:{
         type:String,
-        require:true
+        required:true
     },
     description:{
         type:String,
-        require:true
+        required:true
     },
     image:{
         type:String,
-        require:true
+        required:true
     },
     variants:[
         {
-            type:Schema.Types.ObjectId,
-            ref:"Variants"
-        }
-    ],
+          type: Schema.Types.ObjectId,
+          ref: "Variants",
+        },
+      ],
     store:{
         type: Schema.Types.ObjectId,
         ref:"Store"

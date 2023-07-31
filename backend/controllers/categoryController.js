@@ -49,7 +49,7 @@ let createSubCategoryController = async (req, res) => {
     categoryId,
   });
   subCategory.save();
-  console.log(subCategory.categoryId);
+  console.log(subCategory);
 
   await Category.findOneAndUpdate(
     { _id: subCategory.categoryId },

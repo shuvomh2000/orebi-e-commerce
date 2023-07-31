@@ -4,7 +4,7 @@ const { Schema } = require("mongoose");
 const categorySchema = new Schema({
   name: {
     type: String,
-    require: true,
+    required: true,
   },
   description: {
     type: String,

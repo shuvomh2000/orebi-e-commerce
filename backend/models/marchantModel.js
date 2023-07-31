@@ -4,19 +4,19 @@ const {Schema} = require("mongoose")
 const storeSchema = new Schema({
     storeName:{
         type:String,
-        require:true
+        required:true
     },
     officialEmail:{
         type:String,
-        require:true
+        required:true
     },
     officialPhone:{
         type:String,
-        require:true
+        required:true
     },
     adress:{
         type:String,
-        require:true
+        required:true
     },
     owner:{
         type:Schema.Types.ObjectId,

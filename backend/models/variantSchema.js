@@ -2,29 +2,31 @@ const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 
 const variantSchema = new Schema({
-  name: {
-    type: String,
-    require: true,
-  },
-  price: {
-    type: Number,
-    require: true,
-  },
-  quantity: {
-    type: Number,
-    require: true,
-  },
-  image: {
-    type: String,
-    require: true,
-  },
-  products: {
+  product: {
     type: Schema.Types.ObjectId,
     ref: "Products",
   },
-  store: {
-    type: Schema.Types.ObjectId,
-    ref: "Store",
+  price: {
+    type: Number,
+    required: true,
+  },
+  quantity: {
+    type: String,
+  },
+  color: {
+    type: [String],
+  },
+  image: {
+    type: String,
+  },
+  storage: {
+    type: String,
+  },
+  ram: {
+    type: String,
+  },
+  size: {
+    type: String,
   },
   updated: {
     type: Date,
